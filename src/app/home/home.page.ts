@@ -7,15 +7,28 @@ import { Component } from '@angular/core';
 export class HomePage {
 
     number:number;
-    id:number;
-
-addNumero(number:number) {
-
-
-
-}
+    solucion:number = this.numberAlt(1,100);
 
 
   constructor() {}
 
+
+  numberAlt(a, b){
+
+    return Math.round(Math.random()*(b-a)+parseInt(a));
+
+  }
+
+  Comprobador () {
+
+
+
+  }
+
+
+
+
 }
+
+
+

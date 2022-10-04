@@ -16,8 +16,8 @@
   <ion-item>
     <ion-label position="fixed">Numero:</ion-label>
     <!-- keyup.enter es para poder insertar nombre con la tecla enter -->
-    <ion-input (keyup.enter)="addNumero(number)" placeholder="Introduce el numero" [(ngModel)]="number" required></ion-input>
+    <ion-input type="number" min="1" max="100" [(ngModel)]="number" placeholder="Introduce un número del 1 al 100"></ion-input>
   </ion-item>
-  <ion-button expand="full" (click)="addNumero(number)">Añadir</ion-button>
+  <ion-button expand="full" (click)="Comprobador" >Añadir</ion-button>
 
 </ion-content>
