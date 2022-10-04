@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Numeros
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,15 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Adivina el número</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-label position="fixed">Numero:</ion-label>
+    <!-- keyup.enter es para poder insertar nombre con la tecla enter -->
+    <ion-input (keyup.enter)="addNumero(number)" placeholder="Introduce el numero" [(ngModel)]="number" required></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="addNumero(number)">Añadir</ion-button>
+
 </ion-content>
